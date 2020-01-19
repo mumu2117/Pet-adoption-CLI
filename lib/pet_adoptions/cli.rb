@@ -4,12 +4,15 @@ class PetAdoptions::CLI
   
     def call
       puts "\nWelcome to PetAdoptions. Where you can find your next Bud."
-      puts "                                               "
+
+      puts "--------------------------------"
+
       start
     end
   
     def start
-      puts "\n Welcome! Buds available for adoption. (Please enter a number)\n"
+      puts "\n Welcome! Buddiess available for adoption. (Please enter a number)\n"
+      puts "--------------------------------"
   
       BUDDIES.each.with_index(1) do |buddy, number|
         puts "#{number}. #{buddy}"
@@ -80,13 +83,13 @@ class PetAdoptions::CLI
         puts "Sex:"  + " #{bud.sex}"
         puts "Size:"  + "#{bud.size}"
         puts "#{bud.description}"
-        puts "Love to adopt mor buds #{bud.name}, visit www.bestfriends.org #{bud.url}"
+        puts "Love to adopt more buds #{bud.name}, visit www.bestfriends.org #{bud.url}"
   
         repeat?
     end
   
     def repeat?
-      puts "\n\nWould you like to search more adoptable pets? (Please enter a number)\n"
+      puts "\n\nWould you like to search more adoptable buddies? (Please enter a number)\n"
       puts "1. Yes. Take me back to the list of buddies #{@tribe_member.to_s.downcase}."
       puts "2. Take me to the main menu."
       puts "3. No, I'm done.\n\n"
