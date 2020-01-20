@@ -1,6 +1,9 @@
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'pry'
+
+
 
 
 
@@ -18,5 +21,4 @@ require_relative "./pet_adoptions/equine.rb"
 require_relative "./pet_adoptions/small.rb"
 require_relative "./pet_adoptions/barnyard.rb"
 require_relative "./pet_adoptions/buddycount.rb"
-
 

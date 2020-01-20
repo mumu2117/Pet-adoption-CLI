@@ -31,9 +31,11 @@ class Scraper
       
 
       buddy_profile_details = {}
-      
+
+
+      bud_profile = "http://bestfriends.org"  + url
   
-      bud_profile = "http://bestfriends.org" + url
+      
       doc = Nokogiri::HTML(open(bud_profile))
   
       bud_items = doc.css("div.rescue-groups-pet-info-item")
@@ -54,6 +56,7 @@ class Scraper
       end
 
       buddy_profile_details[:description] = doc.css("section.rescue-groups-pet-info-section p").text.gsub("\n                        ", "")
+      
       buddy_profile_details
 
     end

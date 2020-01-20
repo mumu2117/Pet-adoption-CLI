@@ -81,9 +81,9 @@ class PetAdoptions::CLI
         puts "Age:"+ " #{bud.age}"
         puts "Color:" + " #{bud.color}"
         puts "Sex:"  + " #{bud.sex}"
-        puts "Size:"  + "#{bud.size}"
-        puts "#{bud.description}"
-        puts "Love to adopt more buds #{bud.name}, visit www.bestfriends.org #{bud.url}"
+        puts "Size:"  + "#{bud.size}\n\n"
+        puts "#{bud.description}\n\n"
+        puts "Love to adopt more buds like #{bud.name}, visit www.bestfriends.org #{bud.url}"
   
         repeat?
     end
