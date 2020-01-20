@@ -55,7 +55,7 @@ class Scraper
 
       end
 
-      buddy_profile_details[:description] = doc.css("section.rescue-groups-pet-info-section p").text.gsub("\n                        ", "")
+      buddy_profile_details[:description] = doc.css("section.rescue-groups-pet-info-section p").text.strip
       
       buddy_profile_details
 

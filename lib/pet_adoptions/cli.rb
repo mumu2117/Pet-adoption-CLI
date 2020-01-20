@@ -21,9 +21,15 @@ class PetAdoptions::CLI
       user_input = numbers(gets.chomp)
   
       if !user_input.between?(0,BUDDIES.size-1)
+
         puts "\n Sorry. Please try again.\n"
+
+    
         start
+
       end
+
+      puts "\n Thank you. Just a moment as we look up the list of available #{BUDDIES[user_input].downcase}..."
   
       @tribe_member = tribe_memeber_definition(user_input)
       BuddyCount.new(BUDDIES[user_input], @tribe_member)
@@ -52,6 +58,7 @@ class PetAdoptions::CLI
       if buddy_number < 0 || buddy_number >= buddy_gang.size
 
         puts "I'm sorry, that was an incorrect entry. Please try again."
+
         
         display_allbuddies
 
@@ -82,7 +89,7 @@ class PetAdoptions::CLI
         puts "Color:" + " #{bud.color}"
         puts "Sex:"  + " #{bud.sex}"
         puts "Size:"  + "#{bud.size}\n\n"
-        puts "#{bud.description}\n\n"
+        puts "Description:"  + "#{bud.description}\n\n"
         puts "Love to adopt more buds like #{bud.name}, visit www.bestfriends.org #{bud.url}"
   
         repeat?
