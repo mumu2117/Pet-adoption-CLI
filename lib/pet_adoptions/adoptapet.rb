@@ -20,11 +20,31 @@ class Buddies
    buddy_pack.each do |k, v|
       self.send(("#{k}="), v)
     end
-      
+     
+    if_none
+     
     self
 
   end
   
+  def if_none                                      
+     attributes = ["species", "name", "breed", "age", "url", "size", "color", "sex", "description"]                  
+     zero = [" ", "", nil]                      
+    attributes.each do |zumba| 
+       if zero.any? {|z| self.send("#{zumba}") == z}     
+
+        self.send(("#{zumba}="), "N/A")      
+  
+  
+       end  
+
+
+    end  
+
+ end
+
+
+
 end
 
 
