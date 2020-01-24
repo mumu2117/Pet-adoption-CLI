@@ -1,8 +1,12 @@
 # PetAdoptions
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pet_adoptions`. To experiment with that code, run `bin/console` for an interactive prompt.
+Pet_Adoptions helps you find your new buddy by displaying adoptable buddies/animals at the Best Friends Animals Society (http://bestfriends.org/adopt/adopt-our sancturay). I have adopted about 6 pets in the past most of them Puppy Mill rescues and, three of them are still with me. It breaks my heart to see all these animals that need homes while people spend thousands of dollars on finding their perfect dog. All dogs are perfect in my opinion. Hopefully this will help spread to word to adopt and not buy. 
 
-TODO: Delete this and the text above, and describe your gem
+This gem helps scrape details of aniamls as well as each animal the user chooses from the best friends animal website. 
+
+All content published by Best Friends is the property of Best Friends and is protected by copyright, trademark, and other intellectual property laws. I am contacdting them for permission to publish this. Until I get written permission from them I cannot publish this gem. 
+
+For more information on how tu use the CLI app, see my video walkthrough at: https://www.youtube.com/watch?v=NlbAMJDuPDk&feature=em-lsb-owner
 
 ## Installation
 
@@ -14,7 +18,7 @@ gem 'pet_adoptions'
 
 And then execute:
 
-    $ bundle install
+    $ bundle 
 
 Or install it yourself as:
 
@@ -22,7 +26,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Type 'pet_adoptions' in your command line.
 
 ## Development
 

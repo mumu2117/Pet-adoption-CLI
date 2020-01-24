@@ -4,3 +4,5 @@ require_relative '../lib/environment'
 
 
 PetAdoptions::CLI.new.call
+
+
