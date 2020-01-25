@@ -3,8 +3,11 @@ class Buddies
   attr_accessor :species, :name, :breed, :size, :age, :url,  :color, :sex, :description
 
   def initialize(attributes)
-    attributes.each {|k, v| self.send(("#{k}="), v)}
-    self.class.all << self unless self.class.all.any? {|pet| pet.url == self.url}
+    
+    attributes.each {|k,v| self.send(("#{k}="), v)}
+
+    self.class.all << self 
+    
   end
 
   def self.create_new(buddy_list)
@@ -19,7 +22,9 @@ class Buddies
 
    buddy_pack.each do |k, v|
       self.send(("#{k}="), v)
+      
     end
+
      
     if_none
      

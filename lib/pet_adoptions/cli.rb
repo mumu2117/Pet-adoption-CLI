@@ -1,4 +1,5 @@
-class PetAdoptions::CLI
+
+ class PetAdoptions::CLI
   
     BUDDIES = ["Dogs", "Cats", "Rabbits", "Birds", "Equine", "Pigs", "Barnyard", "Small"]
   
@@ -124,4 +125,6 @@ class PetAdoptions::CLI
     def tribe_memeber_definition(user_input)
       Object.const_get("#{BUDDIES[user_input]}")
     end
+
   end
+  
