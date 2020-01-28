@@ -4,7 +4,7 @@ class Buddies
 
   def initialize(attributes)
     
-    attributes.each {|k,v| self.send(("#{k}="), v)} #unless self.class
+    attributes.each {|k,v| self.send(("#{k}="), v)} unless self.class.all.any?{|buddy| buddy.url == self.url}
 
     self.class.all << self 
     
@@ -25,18 +25,24 @@ class Buddies
       
     end
 
-     
-    #if_none
+     check_for_nil
+   
      
     self
 
   end
   
-  #def if_no_attribute                                    
-     #attributes = ["species", "name", "breed", "age", "url", "size", "color", "sex", "description"]                  
-     #zero = [" ", "", nil]                      
-    #attributes.each do |zumba| 
-       
+  def check_for_nil
+    attributes = ["species", "name", "breed", "age", "url", "size", "color", "sex", "description"]
+    zero = [" ", "", nil]
+    attributes.each do |zumba|
+      if zero.any? { |z| self.send("#{zumba}") == z}
+        self.send(("#{zumba}="), "N/A")
+      end
+    end
+  end
+
+      
 
 
 end
