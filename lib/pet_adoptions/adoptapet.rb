@@ -10,17 +10,17 @@ class Buddies
     
   end
 
-  def self.create_new(buddy_list)
+  def self.create_new(tribe_hash)
 
-    buddy_list.each do |bud_bud|
+    tribe_hash.each do |bud_bud|
       self.new(bud_bud)
     end
 
   end
 
-  def add_attributes(buddy_pack)
+  def add_attributes(attributes)
 
-   buddy_pack.each do |k, v|
+   attributes.each do |k, v|
       self.send(("#{k}="), v)
       
     end

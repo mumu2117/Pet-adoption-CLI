@@ -1,6 +1,6 @@
 class BuddyCount
 
-  def initialize(tribe, member)
+  def initialize(tribe,member)
 
     if tribe == "Small"
 
