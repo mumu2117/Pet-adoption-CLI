@@ -4,11 +4,11 @@ class Scraper
 
     def self.scraping_buddies(buddies) #scrapes main adoption page: "adopt-oursanctuary"page for the list of all animals.
 
-      buds= []
+      
 
       doc = Nokogiri::HTML(open("http://bestfriends.org/adopt/adopt-our-sanctuary/#{buddies}"))
 
-      doc.css("div.rg-animal").each do |budster|
+      doc.css("div.rg-animal").collect do |budster|
 
         bud_features= {}
 
@@ -19,11 +19,11 @@ class Scraper
         bud_features[:age] = budster.css("span.animalAge").text
         bud_features[:url] = budster.css("a").attribute("href").value
 
-        buds<< bud_features
+        bud_features 
 
       end
       
-      buds
+    
 
     end
   
