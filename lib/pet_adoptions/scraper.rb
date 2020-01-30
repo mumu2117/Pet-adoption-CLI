@@ -10,16 +10,11 @@ class Scraper
 
       doc.css("div.rg-animal").collect do |budster|
 
-        bud_features= {}
+        bud_features= {species: buddies, name: budster.css("span.animalName").text, breed: budster.css("span.animalBreed").text, age: budster.css("span.animalAge").text, 
 
-        bud_features[:species] = buddies
+        url: budster.css("a").attribute("href").value}
 
-        bud_features[:name] = budster.css("span.animalName").text
-        bud_features[:breed] =budster.css("span.animalBreed").text
-        bud_features[:age] = budster.css("span.animalAge").text
-        bud_features[:url] = budster.css("a").attribute("href").value
-
-        bud_features 
+    
 
       end
       
