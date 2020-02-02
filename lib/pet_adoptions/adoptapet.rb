@@ -10,9 +10,9 @@ class Buddies
     
   end
 
-  def self.create_new(tribe_hash)
+  def self.create_new(pack_hash)
 
-    tribe_hash.each do |bud_bud|
+    pack_hash.each do |bud_bud|
       self.new(bud_bud)
     end
 

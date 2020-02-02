@@ -2,7 +2,7 @@
 
  class PetAdoptions::CLI
   
-    BUDDIES = ["Dogs", "Cats", "Rabbits", "Birds", "Equine", "Pigs", "Barnyard", "Small"]
+    BUDDIES = ["Dogs", "Cats","Rabbits", "Birds",  "Equine", "Pigs", "Barnyard", "Small"]
   
     def call
       puts "\nWelcome to PetAdoptions. Where you can find your next Bud".light_blue

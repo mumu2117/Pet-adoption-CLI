@@ -1,33 +1,33 @@
 class BuddyCount
 
-  def initialize(tribe,member)
+  def initialize(pack,member)
 
-    if tribe == "Small"
+    if pack == "Small"
 
-      @tribe = "small-furry"
+      @pack = "small-furry"
 
     else
 
-      @tribe = tribe.downcase
+      @pack = pack.downcase
 
     end
 
-    @tribe_member= member
+    @pack_member= member
 
-    tribe_create
-
-  end
-
-  def tribe_create
-
-   tribe_hash = Scraper.scraping_buddies(@tribe)
-
-    @tribe_member.create_new(tribe_hash)
+    pack_create
 
   end
 
-  def self.additonal_features_of_buds(number,tribe_member)
-    buddy = tribe_member.all[number]
+  def pack_create
+
+   pack_hash = Scraper.scraping_buddies(@pack)
+
+    @pack_member.create_new(pack_hash)
+
+  end
+
+  def self.additonal_features_of_buds(number,pack_member)
+    buddy = pack_member.all[number]
     attributes = Scraper.scrape_buddy_details(buddy.url)
     buddy.add_attributes(attributes)
   end
