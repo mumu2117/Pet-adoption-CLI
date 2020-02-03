@@ -16,13 +16,13 @@
   
     def start
 
-      puts "\n Welcome! Buddiess available for adoption. (Please enter a number)\n".cyan
-      puts "----------------------------------------------------------------------"
-  
+      puts "\n Please check out the list of all buddies, and, wish you the very best in your search for your next Best Buddy! (Please enter a number)".cyan
+      puts "-----------------------------------------------------------------------------------------------------------------------------------------\n"
+      puts "                          "
       BUDDIES.each.with_index(1) do |buddy, number|
         puts "#{number}. #{buddy}"
       end
-  
+       puts "             "
       user_input = numbers(gets.chomp)
   
       if !user_input.between?(0,BUDDIES.size-1)
@@ -34,7 +34,7 @@
 
       end
 
-      puts "\n Thank you. Just a moment as we look up the list of available #{BUDDIES[user_input].downcase}..."
+      puts "\n Thank you. Just a moment as we look up the list of available #{BUDDIES[user_input].downcase}...".light_magenta
   
       @tribe_member = tribe_memeber_definition(user_input)
       BuddyCount.new(BUDDIES[user_input], @tribe_member)
@@ -50,13 +50,15 @@
       else
         puts "\n\nAVAILABLE #{@tribe_member.to_s.upcase} FOR ADOPTION:".light_blue
       end
-      puts "Name - Breed - Age"
+      puts "Name - Breed - Age".light_magenta
       puts "-----------------------------"
   
       buddy_gang = @tribe_member.all
       buddy_gang.each.with_index(1) {|bud, num| puts "#{num}. #{bud.name} - #{bud.breed} - #{bud.age}"}
   
       puts "\nWhich pet would you like more information on? (Please enter a number)".cyan 
+
+      puts "       "
   
       buddy_number = numbers(gets.chomp)
   
